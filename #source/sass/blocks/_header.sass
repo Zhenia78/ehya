@@ -14,20 +14,29 @@
     padding: 96px 0 0 0
     &__heading
       margin: 0 0 24px 0
-      font-size: 56px
       line-height: 68px
       color: #FFFFFF
+      @include adaptive-font(56, 32)
     &__paragraph
       margin: 0 0 40px 0
       font-family: Open-Sans
       font-weight: normal
-      font-size: 20px
       line-height: 36px
       color: #FFFFFF
+      @include adaptive-font(20, 16)
     &__buttons
       display: flex
       align-items: center
       justify-content: space-between
+      margin: 0 0 16px 0
+    &__button
+      margin: 0 16px 0 0
+    &__text
+      font-weight: 600
+      font-size: 16px
+      line-height: 22px
+      color: #FFFFFF
+      @include adaptive-font(16, 14)
 
 .nav
   &__list

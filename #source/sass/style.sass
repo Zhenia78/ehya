@@ -69,7 +69,7 @@
 
 //<ОСНОВНОЙ БЛОК>========================================================================================================
 .heading
-  font-family: HK Grotesk
+  font-family: HKGrotesk
   font-weight: bold
   font-size: 36px
   line-height: 48px
@@ -83,25 +83,26 @@
   padding: 16px 27px 16px 38px
   font-family: Open-Sans
   font-weight: bold
-  font-size: 18px
   line-height: 25px
   color: #1565D8
   border: 2px solid #FFFFFF
   border-radius: 2000px
+  @include adaptive-font(18, 16)
   &>img
     margin: 0 5px 0 0
   &-bordered
     padding: 16px 31px 16px 25px
     font-family: Open-Sans
     font-weight: bold
-    font-size: 18px
     line-height: 25px
     color: #FFFFFF
     background: transparent
     border: 2px solid #FFFFFF
     border-radius: 2000px
+    @include adaptive-font(18, 16)
     &>img
       margin: 0 0 0 14px
+      vertical-align: middle
 
 .op
   font-family: Open-Sans
