@@ -1,0 +1,63 @@
+@mixin rotate($deg)
+  -moz-transform: rotate($deg)
+  -ms-transform: rotate($deg)
+  -webkit-transform: rotate($deg)
+  -o-transform: rotate($deg)
+  transform: rotate($deg)
+
+@mixin scale($num)
+  -moz-transform: scale($num)
+  -ms-transform: scale($num)
+  -webkit-transform: scale($num)
+  -o-transform: scale($num)
+  transform: scale($num)
+
+@mixin skew($deg)
+  -moz-transform: skew($deg)
+  -ms-transform: skew($deg)
+  -webkit-transform: skew($deg)
+  -o-transform: skew($deg)
+  transform: skew($deg)
+
+@mixin tr($x, $y, $z)
+  transform: translate3d($x, $y, $z)
+
+@mixin flexbox()
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+@mixin flexboxinline()
+  display: -webkit-inline-flex
+  display: -moz-inline-flex
+  display: -ms-inline-flex
+  display: -o-inline-flex
+  display: inline-flex
+
+@mixin flexorder($val)
+  -webkit-box-ordinal-group: $val
+  -moz-box-ordinal-group: $val
+  -ms-flex-order: $val
+  -webkit-order: $val
+  order: $val
+
+//<ДЕЛАЕТ АДАПТИВНЫЙ ШРИФТ>==============================================================================================
+@mixin adaptive-font($pcSize, $mobSize)
+  $addSize: $pcSize - $mobSize
+  $addMobSize: $addSize + $addSize * 0.7
+
+  @media (max-width: 767px)
+    font-size: calc(#{$mobSize + px} + #{$addMobSize} *((100vw - 320px) / #{$containerWidth}))
+
+  @media (min-width: 767px)
+    font-size: calc(#{$mobSize + px} + #{$addSize} *(100vw / #{$containerWidth}))
+
+//</ДЕЛАЕТ АДАПТИВНЫЙ ШРИФТ>=============================================================================================
+
+@mixin bg-img($url, $position, $repeat, $size)
+  background-image: url($url)
+  background-position: $position
+  background-repeat: $repeat
+  background-size: $size

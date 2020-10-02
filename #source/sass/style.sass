@@ -1,0 +1,113 @@
+//<МИКСИНЫ>==============================================================================================================
+@import "_mixins.sass"
+//</МИКСИНЫ>=============================================================================================================
+
+//<ШРИФТЫ>===============================================================================================================
+@font-face
+  font-family: 'HKGrotesk'
+  src: url('../fonts/HKGrotesk-Bold.woff')
+  src: local('☺'), url('../fonts/HKGrotesk-Bold.woff2') format('woff2')
+  font-weight: bold
+  font-style: normal
+  font-display: swap
+@font-face
+  font-family: 'Open-Sans'
+  src: url('../fonts/OpenSans-Bold.woff')
+  src: local('☺'), url('../fonts/OpenSans-Bold.woff2') format('woff2')
+  font-weight: bold
+  font-style: normal
+  font-display: swap
+@font-face
+  font-family: 'Open-Sans'
+  src: url('../fonts/OpenSans-Regular.woff')
+  src: local('☺'), url('../fonts/OpenSans-Regular.woff2') format('woff2')
+  font-weight: regular
+  font-style: normal
+  font-display: swap
+@font-face
+  font-family: 'Open-Sans'
+  src: url('../fonts/OpenSans-Semibold.woff')
+  src: local('☺'), url('../fonts/OpenSans-Semibold.woff2') format('woff2')
+  font-weight: 600
+  font-style: normal
+  font-display: swap
+//</ШРИФТЫ>==============================================================================================================
+
+//<ПЕРЕМЕННИЕ>===========================================================================================================
+@import "_variables.sass"
+//</ПЕРЕМЕННИЕ>==========================================================================================================
+
+//<ОБНУЛЕНИЯ, ОБЩИЕ ПАРАМЕТРЫ>===========================================================================================
+@import "_nullstyle.sass"
+//</ОБНУЛЕНИЯ, ОБЩИЕ ПАРАМЕТРЫ>==========================================================================================
+
+//<ОБОЛОЧКА>=============================================================================================================
+.wrapper
+  width: 100%
+  min-height: 100%
+  overflow: hidden
+
+//</ОБОЛОЧКА>============================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>=======================================================================================================
+.container
+  max-width: $mv+px
+  margin: 0 auto
+  width: 100%
+
+  @media (max-width: $md1+px)
+    max-width: 970px
+
+  @media (max-width: $md2+px)
+    max-width: 750px
+
+  @media (max-width: $md3+px)
+    max-width: none
+    padding: 0 10px
+
+//</ОСНОВНАЯ СЕТКА>======================================================================================================
+
+//<ОСНОВНОЙ БЛОК>========================================================================================================
+.heading
+  font-family: HK Grotesk
+  font-weight: bold
+  font-size: 36px
+  line-height: 48px
+  text-align: center
+  letter-spacing: 0.2px
+  color: #183B56
+
+.button
+  display: flex
+  align-items: center
+  padding: 16px 27px 16px 38px
+  font-family: Open-Sans
+  font-weight: bold
+  font-size: 18px
+  line-height: 25px
+  color: #1565D8
+  border: 2px solid #FFFFFF
+  border-radius: 2000px
+  &>img
+    margin: 0 5px 0 0
+  &-bordered
+    padding: 16px 31px 16px 25px
+    font-family: Open-Sans
+    font-weight: bold
+    font-size: 18px
+    line-height: 25px
+    color: #FFFFFF
+    background: transparent
+    border: 2px solid #FFFFFF
+    border-radius: 2000px
+    &>img
+      margin: 0 0 0 14px
+
+.op
+  font-family: Open-Sans
+//</ОСНОВНОЙ БЛОК>=======================================================================================================
+
+//<ПОДКЛЮЧЕНИЯ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЕЛМЕНТОВ>=========================================================================
+@import "blocks/_header.sass"
+@import "blocks/_footer.sass"
+//</ПОДКЛЮЧЕНИЯ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЕЛМЕНТОВ>========================================================================

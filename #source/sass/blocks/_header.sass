@@ -1,0 +1,87 @@
+.header
+  padding: 0 0 275px 0
+  @include bg-img("../img/header-bg.png", "top center", "no-repeat", "100% auto")
+  &-top
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 38px 0 34px 0
+  &-bottom
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 96px 0 0 0
+    &__heading
+      margin: 0 0 24px 0
+      font-size: 56px
+      line-height: 68px
+      color: #FFFFFF
+    &__paragraph
+      margin: 0 0 40px 0
+      font-family: Open-Sans
+      font-weight: normal
+      font-size: 20px
+      line-height: 36px
+      color: #FFFFFF
+    &__buttons
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+.nav
+  &__list
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__item
+    margin: 0 0 0 40px
+  &__link
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+    color: #ffffff
+  &__button
+    padding: 13px 24px
+    font-weight: bold
+    font-size: 16px
+    line-height: 22px
+    border-radius: 8px
+  &__dropdown
+    position: relative
+    padding: 0 13px 0 0
+    cursor: pointer
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      width: 9px
+      transition: all 0.3s ease
+      @include bg-img("../img/icons/arrow-down.svg", "center", "no-repeat", "100% auto")
+    &-active
+      &::before
+        content: ''
+        transform: rotate(180deg)
+    
+  &-dropdown-list
+    position: absolute
+    right: 0
+    bottom: -550%
+    z-index: 100
+    width: 160%
+    padding: 10px
+    background: #ffffff
+    border-radius: 10px
+    &_hidden
+      display: none
+    &_visible
+      display: block
+    &__item
+      padding: 0 0 3px 0
+      &>a
+        font-weight: 600
+        font-size: 16px
+        line-height: 22px
+        color: #1565D8
