@@ -42,6 +42,9 @@
 //</ОБНУЛЕНИЯ, ОБЩИЕ ПАРАМЕТРЫ>==========================================================================================
 
 //<ОБОЛОЧКА>=============================================================================================================
+body.body-active
+  overflow: hidden
+
 .wrapper
   width: 100%
   min-height: 100%
@@ -59,7 +62,7 @@
     max-width: 970px
 
   @media (max-width: $md2+px)
-    max-width: 750px
+    max-width: 704px
 
   @media (max-width: $md3+px)
     max-width: none
@@ -76,6 +79,21 @@
   text-align: center
   letter-spacing: 0.2px
   color: #183B56
+
+.title
+  font-family: HKGrotesk
+  font-weight: bold
+  line-height: 33px
+  letter-spacing: 0.2px
+  color: #183B56
+  @include adaptive-font(22, 20)
+
+.text
+  font-family: Open-Sans
+  font-weight: normal
+  line-height: 32px
+  color: #5A7184
+  @include adaptive-font(18, 16)
 
 .button
   display: flex
@@ -110,5 +128,7 @@
 
 //<ПОДКЛЮЧЕНИЯ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЕЛМЕНТОВ>=========================================================================
 @import "blocks/_header.sass"
+@import "blocks/_features-part.sass"
 @import "blocks/_footer.sass"
+@import "media.sass"
 //</ПОДКЛЮЧЕНИЯ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЕЛМЕНТОВ>========================================================================

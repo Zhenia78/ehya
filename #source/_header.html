@@ -4,6 +4,7 @@
       <div class="logo header__logo">
         <img src="img/icons/logo.svg" alt="EHYA">
       </div>
+      <button class="header__burger"><span></span></button>
       <nav class="nav header__nav">
         <ul class="nav__list">
           <li class="nav__item"><a href="#" class="nav__link op">Home</a></li>
@@ -43,5 +44,32 @@
     <!-- /.header-bottom -->
   </div>
   <!-- /.container -->
+  <div class="dropdown">
+    <ul class="dropdown__list">
+      <li class="dropdown-item dropdown__item"><a href="#" class="dropdown__link op">Home</a></li>
+      <li class="dropdown-item dropdown__item dropdown__item_sliding"><span
+          class="dropdown__link dropdown__link_sliding op" data-href="#dropdown1">Landings</span>
+        <ul id="dropdown1" class="dropdown-item-list dropdown-item-list_hidden">
+          <li class="dropdown-item-list__li"><a class="op" href="#">Landing 1</a></li>
+          <li class="dropdown-item-list__li"><a class="op" href="#">Landing 2</a></li>
+          <li class="dropdown-item-list__li"><a class="op" href="#">Landing 3</a></li>
+          <li class="dropdown-item-list__li"><a class="op" href="#">Landing 4</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-item dropdown__item dropdown__item_sliding"><span
+          class="dropdown__link dropdown__link_sliding op" data-href="#dropdown2">Pages</span>
+        <ul id="dropdown2" class="dropdown-item-list dropdown-item-list_hidden">
+          <li class="dropdown-item-list__li"><a class="op" href="#">API</a></li>
+          <li class="dropdown-item-list__li"><a class="op" href="#">Examples</a></li>
+          <li class="dropdown-item-list__li"><a class="op" href="#">Contacts</a></li>
+          <li class="dropdown-item-list__li"><a class="op" href="#">History</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-item dropdown__item"><a href="#" class="dropdown__link op">Docs</a></li>
+      <li class="dropdown-item dropdown__item"><a href="#" class="dropdown__link op">Help</a></li>
+      <li class="dropdown-item dropdown__item"><a href="#" class="dropdown__button button op">Get it now</a></li>
+    </ul>
+  </div>
+  <!-- .dropdown -->
 </header>
 <!-- /.header -->

@@ -126,6 +126,10 @@ h6 {
 
 /*--------------------*/
 
+body.body-active {
+  overflow: hidden;
+}
+
 .wrapper {
   width: 100%;
   min-height: 100%;
@@ -146,6 +150,21 @@ h6 {
   text-align: center;
   letter-spacing: 0.2px;
   color: #183B56;
+}
+
+.title {
+  font-family: HKGrotesk;
+  font-weight: bold;
+  line-height: 33px;
+  letter-spacing: 0.2px;
+  color: #183B56;
+}
+
+.text {
+  font-family: Open-Sans;
+  font-weight: normal;
+  line-height: 32px;
+  color: #5A7184;
 }
 
 .button {
@@ -187,9 +206,9 @@ h6 {
 .header {
   padding: 0 0 275px 0;
   background-image: url("../img/header-bg.png");
-  background-position: "top center";
-  background-repeat: "no-repeat";
-  background-size: "100% auto";
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
 }
 
 .header-top {
@@ -218,7 +237,7 @@ h6 {
   font-family: Open-Sans;
   font-weight: normal;
   line-height: 36px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .header-bottom__buttons {
@@ -230,13 +249,83 @@ h6 {
 
 .header-bottom__button {
   margin: 0 16px 0 0;
+  background-color: #ffffff;
 }
 
 .header-bottom__text {
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
-  color: #FFFFFF;
+  color: #A1C1EF;
+}
+
+.header__burger {
+  position: relative;
+  z-index: 201;
+  display: none;
+  width: 22px;
+  height: 17.7px;
+  background: transparent;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.header__burger > span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 2.2px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  transform: translate(0, -50%);
+  transition: all 0.2s linear;
+}
+
+.header__burger:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 2.2px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  transition: all 0.5s linear;
+}
+
+.header__burger:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 2.2px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  transition: all 0.5s linear;
+}
+
+.header__burger_active {
+  overflow: visible;
+}
+
+.header__burger_active > span {
+  transform: translate(0, -50%) scale(0);
+}
+
+.header__burger_active:before {
+  top: 7.4px;
+  transform: rotate(45deg);
+}
+
+.header__burger_active:after {
+  bottom: 7.4px;
+  transform: rotate(-45deg);
 }
 
 .nav__list {
@@ -279,9 +368,9 @@ h6 {
   width: 9px;
   transition: all 0.3s ease;
   background-image: url("../img/icons/arrow-down.svg");
-  background-position: "center";
-  background-repeat: "no-repeat";
-  background-size: "100% auto";
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 
 .nav__dropdown-active::before {
@@ -319,7 +408,138 @@ h6 {
   color: #1565D8;
 }
 
+.dropdown {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  background: #000000;
+  opacity: 0.8;
+  visibility: hidden;
+  transition: all 0.5s ease-in;
+}
+
+.dropdown_active {
+  visibility: visible;
+}
+
+.dropdown__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown__item {
+  margin: 0 0 15px 0;
+}
+
+.dropdown__link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.dropdown__link_sliding {
+  position: relative;
+}
+
+.dropdown__link_sliding::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -14px;
+  bottom: 0;
+  width: 9px;
+  transition: all 0.3s ease;
+  background-image: url("../img/icons/arrow-down.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.dropdown__link_sliding-active::before {
+  content: '';
+  transform: rotate(180deg);
+}
+
+.dropdown__button {
+  padding: 13px 24px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  border-radius: 8px;
+}
+
+.dropdown-item-list__li > a {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1565D8;
+}
+
+.features-part_running-into {
+  margin: -210px 0 0 0;
+}
+
+.features-part__body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 96px;
+}
+
+.features-part__card {
+  display: flex;
+  justify-content: space-between;
+  max-width: 466px;
+  width: 100%;
+  margin: 0 0 16px 0;
+  padding: 32px;
+  background: #FFFFFF;
+  border: 1px solid #E5EAF4;
+  box-sizing: border-box;
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+}
+
+.features-part-card__icon {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  margin: 0 24px 0 0;
+  overflow: hidden;
+}
+
+.features-part-card__icon > img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.features-part-card__title {
+  margin: 0 0 4px 0;
+}
+
 @media (min-width: 767px) {
+  .title {
+    font-size: calc(20px + 2 *(100vw / 1140));
+  }
+
+  .text {
+    font-size: calc(16px + 2 *(100vw / 1140));
+  }
+
   .button {
     font-size: calc(16px + 2 *(100vw / 1140));
   }
@@ -341,26 +561,52 @@ h6 {
   }
 }
 
-@media (max-width: 1152px) {
+@media (max-width: 1170px) {
   .container {
     max-width: 970px;
   }
-}
 
-@media (max-width: 992.98px) {
-  .container {
-    max-width: 750px;
+  .features-part__card {
+    max-width: 370px;
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 992px) {
   .container {
-    max-width: none;
-    padding: 0 10px;
+    max-width: 704px;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__burger {
+    display: block;
+  }
+
+  .features-part__body {
+    padding: 0;
+  }
+
+  .features-part__card {
+    max-width: 344px;
   }
 }
 
 @media (max-width: 767px) {
+  .container {
+    max-width: none;
+    padding: 0 10px;
+  }
+
+  .title {
+    font-size: calc(20px + 3.4 *((100vw - 320px) / 1140));
+  }
+
+  .text {
+    font-size: calc(16px + 3.4 *((100vw - 320px) / 1140));
+  }
+
   .button {
     font-size: calc(16px + 3.4 *((100vw - 320px) / 1140));
   }

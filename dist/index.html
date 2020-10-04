@@ -2,24 +2,25 @@
 <html lang="en">
 
 <head>
-    <title>Ehya</title>
-    <meta charset="UTF-8">
-    <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/style.min.css">
-    <!-- <link rel="shortcut icon" type="image/x-icon" href=""> -->
-    <!-- <meta name="robots" content="noindex, nofollow"/> -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ehya</title>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="css/style.min.css">
+  <!-- <link rel="shortcut icon" type="image/x-icon" href=""> -->
+  <!-- <meta name="robots" content="noindex, nofollow"/> -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="header">
+  <div class="wrapper">
+    <header class="header">
   <div class="container">
     <div class="header-top">
       <div class="logo header__logo">
         <img src="img/icons/logo.svg" alt="EHYA">
       </div>
+      <button class="header__burger"><span></span></button>
       <nav class="nav header__nav">
         <ul class="nav__list">
           <li class="nav__item"><a href="#" class="nav__link op">Home</a></li>
@@ -59,18 +60,83 @@
     <!-- /.header-bottom -->
   </div>
   <!-- /.container -->
+  <div class="dropdown">
+    <ul class="dropdown__list">
+      <li class="dropdown-item dropdown__item"><a href="#" class="dropdown__link op">Home</a></li>
+      <li class="dropdown-item dropdown__item dropdown__item_sliding"><span
+          class="dropdown__link dropdown__link_sliding op" data-href="#dropdown1">Landings</span>
+        <ul id="dropdown1" class="dropdown-item-list dropdown-item-list_hidden">
+          <li class="dropdown-item-list__li"><a class="op" href="#">Landing 1</a></li>
+          <li class="dropdown-item-list__li"><a class="op" href="#">Landing 2</a></li>
+          <li class="dropdown-item-list__li"><a class="op" href="#">Landing 3</a></li>
+          <li class="dropdown-item-list__li"><a class="op" href="#">Landing 4</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-item dropdown__item dropdown__item_sliding"><span
+          class="dropdown__link dropdown__link_sliding op" data-href="#dropdown2">Pages</span>
+        <ul id="dropdown2" class="dropdown-item-list dropdown-item-list_hidden">
+          <li class="dropdown-item-list__li"><a class="op" href="#">API</a></li>
+          <li class="dropdown-item-list__li"><a class="op" href="#">Examples</a></li>
+          <li class="dropdown-item-list__li"><a class="op" href="#">Contacts</a></li>
+          <li class="dropdown-item-list__li"><a class="op" href="#">History</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-item dropdown__item"><a href="#" class="dropdown__link op">Docs</a></li>
+      <li class="dropdown-item dropdown__item"><a href="#" class="dropdown__link op">Help</a></li>
+      <li class="dropdown-item dropdown__item"><a href="#" class="dropdown__button button op">Get it now</a></li>
+    </ul>
+  </div>
+  <!-- .dropdown -->
 </header>
 <!-- /.header -->
 
 
-        <main>
-            
-        </main>
+    <main>
+      <section class="features-part features-part_running-into">
+        <div class="container">
+          <div class="features-part__body">
+            <div class="features-part__card features-part-card">
+              <div class="features-part-card__icon"><img src="img\icons\features-part-icon-1.svg" alt="icon"></div>
+              <div class="features-part-card__description">
+                <h3 class="title features-part-card__title">Super Architecture</h3>
+                <p class="text features-part-card__text">Modular, realiable, OOP, simple fast, for scalable
+                  client-side code.</p>
+              </div>
+            </div>
+            <div class="features-part__card features-part-card">
+              <div class="features-part-card__icon"><img src="img\icons\features-part-icon-2.svg" alt="icon"></div>
+              <div class="features-part-card__description">
+                <h3 class="title features-part-card__title">No Dependencies</h3>
+                <p class="text features-part-card__text">Independent of any third-party libraries or frameworks.</p>
+              </div>
+            </div>
+            <div class="features-part__card features-part-card">
+              <div class="features-part-card__icon"><img src="img\icons\features-part-icon-3.svg" alt="icon"></div>
+              <div class="features-part-card__description">
+                <h3 class="title features-part-card__title">Well Documented</h3>
+                <p class="text features-part-card__text">Each component and module has descriptions and API.</p>
+              </div>
+            </div>
+            <div class="features-part__card features-part-card">
+              <div class="features-part-card__icon"><img src="img\icons\features-part-icon-4.svg" alt="icon"></div>
+              <div class="features-part-card__description">
+                <h3 class="title features-part-card__title">Real Life Tested</h3>
+                <p class="text features-part-card__text">We use it in our work. On this site too for the front and
+                  admin.</p>
+              </div>
+            </div>
+          </div>
+          <!-- .features-part__body -->
+        </div>
+        <!-- .container -->
+      </section>
+      <!-- /.features-part -->
+    </main>
 
 
-        
-    </div>
-    <script src="js/jquery-3.5.1.min.js"></script>
+    
+  </div>
+  <script src="js/jquery-3.5.1.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 
