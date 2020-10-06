@@ -32,20 +32,20 @@
       padding: 7px 16px
       font-family: Open-Sans
       font-weight: 600
-      font-size: 18px
       line-height: 25px
       color: #5A7184
       background-color: #1B2A36
       border-radius: 6px
+      @include adaptive-font(18, 14)
       &.tabs__item_active
         color: #183B56
         background: #FFFFFF
     &__text
       display: none
       font-family: SFMono
-      font-size: 16px
       line-height: 20px
       color: #FFFFFF
+      @include adaptive-font(16, 14)
       &.tabs__text_active
         display: block
       &_blue
@@ -54,12 +54,14 @@
         margin: 0 8px 0 0
         vertical-align: middle
     &-form
+      display: flex
+      align-items: center
       &__label
         font-family: Open-Sans
         font-weight: normal
-        font-size: 16px
         line-height: 22px
         color: #183B56
+        @include adaptive-font(16, 14)
         &:first-child
           margin: 0 31px 0 0
         &>input

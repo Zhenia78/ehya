@@ -20,6 +20,18 @@
       &__icon
         margin: 0 0 24px 0
 
+  .quickstart
+    padding: 96px 0 48px 0
+    &__text
+      margin: 0 0 48px 0
+    &-tabs
+      width: 100%
+      &__body
+        width: 100%
+        height: auto
+      &__items-row
+        flex-wrap: wrap
+
 @media (max-width: 767px)
   .header
     &-bottom
@@ -32,6 +44,18 @@
       max-width: 100%
     &__more
       margin: 24px auto 0 auto
+
+  .quickstart
+    padding: 70px 0 48px 0
+    &__text
+      margin: 0 0 40px 0
+    &-tabs
+      &__items-row
+        flex-wrap: wrap
+        justify-content: flex-start
+        margin: 0 0 25px 0
+      &__item
+        margin: 0 10px 10px 0
 
 @media (max-width: 520px)
   .header
@@ -48,7 +72,7 @@
 
   .button
     min-width: 207px
-    padding: 13px 24px 
+    padding: 13px 24px
     &-bordered
       min-width: 207px
       padding: 13px 24px
@@ -56,10 +80,22 @@
   .dropdown__button
     min-width: 0
 
+  .quickstart
+    padding: 80px 0
+    &__text
+      margin: 0 0 36px 0
+    &-tabs
+      &__item
+        padding: 6px 12px
+      &__body
+        padding: 24px
+      &-form
+        flex-direction: column
+        &__label
+          &:first-child
+            margin: 0 0 19px 0
 
 @media (max-width: 400px)
   .features-part
     &__card
       align-items: center
-
-
