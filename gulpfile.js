@@ -3,7 +3,7 @@ let prj_f = "dist";
 
 let path = {
   src: {
-    html: [src_f + "/**/*.html", "!" + src_f + "/**/_*.html"],
+    pug: [src_f + "/**/*.pug", "!" + src_f + "/**/_*.pug"],
     css: src_f + "/sass/style.sass",
     js: src_f + "/js/**/*.js",
     fonts: src_f + "/fonts/*.ttf",
@@ -19,7 +19,7 @@ let path = {
     img_s: prj_f + "/img/icons"
   },
   watch: {
-    html: src_f + "/**/*.html",
+    pug: src_f + "/**/*.pug",
     css: src_f + "/sass/**/*.sass",
     js: src_f + "/js/**/*.js",
     img: src_f + "/img/**/*.{jpg,png,svg,gif,ico,webp}"
@@ -45,6 +45,7 @@ let {
   gulp_ttf2woff = require("gulp-ttf2woff"),
   gulp_ttf2woff2 = require("gulp-ttf2woff2"),
   fonter = require("gulp-fonter"),
+  pug = require("gulp-pug"),
   file_include = require("gulp-file-include");
 
 
@@ -58,9 +59,9 @@ function browserSync() {
   });
 }
 
-function html() {
-  return src(path.src.html)
-    .pipe(file_include())
+function Pug() {
+  return src(path.src.pug)
+    .pipe(pug())
     .pipe(dest(path.build.html))
     .pipe(browser_sync.stream());
 }
@@ -144,7 +145,7 @@ function images() {
 }
 
 function watchFiles() {
-  gulp.watch([path.watch.html], html);
+  gulp.watch([path.watch.pug], Pug);
   gulp.watch([path.watch.css], css);
   gulp.watch([path.watch.js], js);
   gulp.watch([path.watch.img], images);
@@ -154,11 +155,11 @@ function clean() {
   return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(css, html, js, images, fonts));
+let build = gulp.series(clean, gulp.parallel(css, Pug, js, images, fonts));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 
-exports.html = html;
+exports.pug = Pug;
 exports.js = js;
 exports.fonts = fonts;
 exports.images = images;

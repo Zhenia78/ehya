@@ -1,0 +1,100 @@
+doctype html
+head
+  title Ehya
+  meta(charset='UTF-8')
+  meta(name='format-detection' content='telephone=no')
+  link(rel='stylesheet' href='css/style.min.css')
+  // <link rel="shortcut icon" type="image/x-icon" href="">
+  // <meta name="robots" content="noindex, nofollow"/>
+  // <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+body
+  .wrapper
+    include _header
+
+    main
+      section.features-part.features-part_running-into
+        .container
+          .features-part__body
+            .features-part__card.features-part-card
+              .features-part-card__icon
+                img(src='img/icons/features-part-icon-1.svg' alt='icon')
+              .features-part-card__description
+                h3.title.features-part-card__title Super Architecture
+                p.text.features-part-card__text
+                  | Modular, realiable, OOP, simple fast, for scalable
+                  | client-side code.
+            .features-part__card.features-part-card
+              .features-part-card__icon
+                img(src='img/icons/features-part-icon-2.svg' alt='icon')
+              .features-part-card__description
+                h3.title.features-part-card__title No Dependencies
+                p.text.features-part-card__text Independent of any third-party libraries or frameworks.
+            .features-part__card.features-part-card
+              .features-part-card__icon
+                img(src='img/icons/features-part-icon-3.svg' alt='icon')
+              .features-part-card__description
+                h3.title.features-part-card__title Well Documented
+                p.text.features-part-card__text Each component and module has descriptions and API.
+            .features-part__card.features-part-card
+              .features-part-card__icon
+                img(src='img/icons/features-part-icon-4.svg' alt='icon')
+              .features-part-card__description
+                h3.title.features-part-card__title Real Life Tested
+                p.text.features-part-card__text
+                  | We use it in our work. On this site too for the front and
+                  | admin.
+            a.features-part__more(href='#')
+              | Explore all features
+              img(src='img/icons/arrow-right-blue.svg' alt='→')
+          // .features-part__body
+        // .container
+      // /.features-part
+
+      section.quickstart
+        .container
+          .quickstart__body
+            span.subtitle.quickstart__subtitle QUICKSTART
+            h2.heading.quickstart__heading Awesome isn't it? Let's dive in!
+            p(class="text quickstart__text") Install packages with npm or other methods. Package will be installed to components/ directory and ready to use for your project.
+            .quickstart-tabs
+              div(class="tabs quickstart-tabs__body")
+                .quickstart-tabs__items-row
+                    button(class="tabs__item quickstart-tabs__item tabs__item_active" data-href="#quickstart-tabs-1") npm
+                    button(class="tabs__item quickstart-tabs__item" data-href="#quickstart-tabs-2") bower
+                    button(class="tabs__item quickstart-tabs__item" data-href="#quickstart-tabs-3") Yarn
+                    button(class="tabs__item quickstart-tabs__item" data-href="#quickstart-tabs-4") NuGet
+                    button(class="tabs__item quickstart-tabs__item" data-href="#quickstart-tabs-5") spm
+                    button(class="tabs__item quickstart-tabs__item" data-href="#quickstart-tabs-6") meteor
+                p(id="quickstart-tabs-1" class="tabs__text quickstart-tabs__text tabs__text_active")
+                  img(src="img/icons/dollar-icon.svg" alt="$")
+                  | npm install #[span.quickstart-tabs__text_blue -g] ehya.js
+                p(id="quickstart-tabs-2" class="tabs__text quickstart-tabs__text")
+                  img(src="img/icons/dollar-icon.svg" alt="$")
+                  | bower install #[span.quickstart-tabs__text_blue -g] ehya.js
+                p(id="quickstart-tabs-3" class="tabs__text quickstart-tabs__text")
+                  img(src="img/icons/dollar-icon.svg" alt="$")
+                  | yarn install #[span.quickstart-tabs__text_blue -g] ehya.js
+                p(id="quickstart-tabs-4" class="tabs__text quickstart-tabs__text")
+                  img(src="img/icons/dollar-icon.svg" alt="$")
+                  | nuget install #[span.quickstart-tabs__text_blue -g] ehya.js
+                p(id="quickstart-tabs-5" class="tabs__text quickstart-tabs__text")
+                  img(src="img/icons/dollar-icon.svg" alt="$")
+                  | spm install #[span.quickstart-tabs__text_blue -g] ehya.js
+                p(id="quickstart-tabs-6" class="tabs__text quickstart-tabs__text")
+                  img(src="img/icons/dollar-icon.svg" alt="$")
+                  | meteor install #[span.quickstart-tabs__text_blue -g] ehya.js
+
+              form.quickstart-tabs__form(class="quickstart-tabs-form" action="#")
+                label.quickstart-tabs-form__label
+                  input.quickstart-tabs-form__checkbox(type="checkbox") 
+                  | Requires #[span node], #[span npm] and #[span git]
+                label.quickstart-tabs-form__label
+                  input.quickstart-tabs-form__checkbox(type="checkbox") 
+                  | Latest release #[span v1.8.9]
+
+                  
+
+
+    include _footer
+  include _js

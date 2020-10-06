@@ -31,6 +31,13 @@
   font-weight: 600
   font-style: normal
   font-display: swap
+@font-face
+  font-family: 'SFMono'
+  src: url('../fonts/SFMono-Medium.woff')
+  src: local('☺'), url('../fonts/SFMono-Medium.woff2') format('woff2')
+  font-weight: 500
+  font-style: normal
+  font-display: swap
 //</ШРИФТЫ>==============================================================================================================
 
 //<ПЕРЕМЕННИЕ>===========================================================================================================
@@ -65,9 +72,14 @@ body.body-active
     max-width: 704px
 
   @media (max-width: $md3+px)
-    max-width: none
-    padding: 0 10px
+    max-width: 560px
 
+  @media (max-width: $md4+px)
+    max-width: 480px
+
+  @media (max-width: $md5+px)
+    width: 100%
+    padding: 0 20px
 //</ОСНОВНАЯ СЕТКА>======================================================================================================
 
 //<ОСНОВНОЙ БЛОК>========================================================================================================
@@ -94,6 +106,15 @@ body.body-active
   line-height: 32px
   color: #5A7184
   @include adaptive-font(18, 16)
+
+.subtitle
+  font-family: Open-Sans
+  font-weight: 600
+  font-size: 14px
+  line-height: 19px
+  letter-spacing: 2px
+  text-transform: uppercase
+  color: #36B37E
 
 .button
   display: flex
@@ -129,6 +150,7 @@ body.body-active
 //<ПОДКЛЮЧЕНИЯ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЕЛМЕНТОВ>=========================================================================
 @import "blocks/_header.sass"
 @import "blocks/_features-part.sass"
+@import "blocks/_quickstart.sass"
 @import "blocks/_footer.sass"
 @import "media.sass"
 //</ПОДКЛЮЧЕНИЯ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЕЛМЕНТОВ>========================================================================

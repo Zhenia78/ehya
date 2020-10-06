@@ -1,0 +1,88 @@
+header.header
+  .container
+    .header-top
+      .logo.header__logo
+        img(src='img/icons/logo.svg' alt='EHYA')
+      button.header__burger
+        span
+      nav.nav.header__nav
+        ul.nav__list
+          li.nav__item
+            a.nav__link.op(href='#') Home
+          li.nav__item.nav__dropdown(data-href='#drop1')
+            span.nav__link.op Landings
+            ul#drop1.nav-dropdown-list.nav-dropdown-list_hidden
+              li.nav-dropdown-list__item
+                a.op(href='#') Landing 1
+              li.nav-dropdown-list__item
+                a.op(href='#') Landing 2
+              li.nav-dropdown-list__item
+                a.op(href='#') Landing 3
+              li.nav-dropdown-list__item
+                a.op(href='#') Landing 4
+          li.nav__item.nav__dropdown(data-href='#drop2')
+            span.nav__link.op Pages
+            ul#drop2.nav-dropdown-list.nav-dropdown-list_hidden
+              li.nav-dropdown-list__item
+                a.op(href='#') API
+              li.nav-dropdown-list__item
+                a.op(href='#') Examples
+              li.nav-dropdown-list__item
+                a.op(href='#') Contacts
+              li.nav-dropdown-list__item
+                a.op(href='#') History
+          li.nav__item
+            a.nav__link.op(href='#') Docs
+          li.nav__item
+            a.nav__link.op(href='#') Help
+          li.nav__item
+            a.nav__link.nav__button.button.op(href='#') Get it now
+    // /.header-top
+    .header-bottom
+      h1.heading.header-bottom__heading Awesome &amp; powerfull landing for your software library
+      p.header-bottom__paragraph An awesome &amp; powefull JavaScript library for building user interfaces
+      .header-bottom__buttons
+        button.button.header-bottom__button
+          img(src='img/icons/github-icon.svg' alt='Git')
+          | View on
+          |           Github
+        button.button-bordered
+          | Documentation
+          img(src='img/icons/arrow-right-icon.svg')
+      span.header-bottom__text.op Zip-archive with production version, all sources and addons.
+    // /.header-bottom
+  // /.container
+  .dropdown
+    ul.dropdown__list
+      li.dropdown-item.dropdown__item
+        a.dropdown__link.op(href='#') Home
+      li.dropdown-item.dropdown__item.dropdown__item_sliding
+        span.dropdown__link.dropdown__link_sliding.op(data-href='#dropdown1') Landings
+        ul#dropdown1.dropdown-item-list.dropdown-item-list_hidden
+          li.dropdown-item-list__li
+            a.op(href='#') Landing 1
+          li.dropdown-item-list__li
+            a.op(href='#') Landing 2
+          li.dropdown-item-list__li
+            a.op(href='#') Landing 3
+          li.dropdown-item-list__li
+            a.op(href='#') Landing 4
+      li.dropdown-item.dropdown__item.dropdown__item_sliding
+        span.dropdown__link.dropdown__link_sliding.op(data-href='#dropdown2') Pages
+        ul#dropdown2.dropdown-item-list.dropdown-item-list_hidden
+          li.dropdown-item-list__li
+            a.op(href='#') API
+          li.dropdown-item-list__li
+            a.op(href='#') Examples
+          li.dropdown-item-list__li
+            a.op(href='#') Contacts
+          li.dropdown-item-list__li
+            a.op(href='#') History
+      li.dropdown-item.dropdown__item
+        a.dropdown__link.op(href='#') Docs
+      li.dropdown-item.dropdown__item
+        a.dropdown__link.op(href='#') Help
+      li.dropdown-item.dropdown__item
+        a.dropdown__button.button.op(href='#') Get it now
+  // .dropdown
+// /.header

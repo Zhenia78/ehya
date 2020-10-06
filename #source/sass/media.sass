@@ -14,6 +14,52 @@
     &__body
       padding: 0
     &__card
+      flex-direction: column
       max-width: 344px
+    &-card
+      &__icon
+        margin: 0 0 24px 0
+
+@media (max-width: 767px)
+  .header
+    &-bottom
+      padding: 50px 0 0 0
+      &__heading
+        line-height: 50px
+
+  .features-part
+    &__card
+      max-width: 100%
+    &__more
+      margin: 24px auto 0 auto
+
+@media (max-width: 520px)
+  .header
+    &-bottom
+      &__heading
+        line-height: 40px
+      &__paragraph
+        margin: 0 0 25px 0
+      &__buttons
+        display: flex
+        flex-direction: column
+      &__button
+        margin: 0 0 12px 0
+
+  .button
+    min-width: 207px
+    padding: 13px 24px 
+    &-bordered
+      min-width: 207px
+      padding: 13px 24px
+
+  .dropdown__button
+    min-width: 0
+
+
+@media (max-width: 400px)
+  .features-part
+    &__card
+      align-items: center
 
 

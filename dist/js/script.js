@@ -3,6 +3,8 @@ $(document).ready(function () {
   let nav_dropdown = $(".nav__dropdown");
   let dropdown_link = $(".dropdown__link_sliding");
   let burger = $(".header__burger");
+  let tabsItem = $(".tabs__item");
+  let tabsText = $(".tabs__text");
 
 
   nav_dropdown.click(function () {
@@ -39,6 +41,15 @@ $(document).ready(function () {
     $(this).toggleClass("header__burger_active");
     $(".dropdown").toggleClass("dropdown_active");
     $("body").toggleClass("body-active");
+  });
+
+  tabsItem.click(function () {
+    tabsItem.removeClass("tabs__item_active");
+    tabsText.removeClass("tabs__text_active");
+
+    var target = $(this).attr("data-href");
+    $(this).addClass("tabs__item_active");
+    $(target).addClass("tabs__text_active");
   });
 
 
