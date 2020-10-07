@@ -18,7 +18,7 @@ body
           .features-part__body
             .features-part__card.features-part-card
               .features-part-card__icon
-                img(src='img/icons/features-part-icon-1.svg' alt='icon')
+                img(src='img/icons/features-icon-8.svg' alt='icon')
               .features-part-card__description
                 h3.title.features-part-card__title Super Architecture
                 p.text.features-part-card__text
@@ -26,25 +26,25 @@ body
                   | client-side code.
             .features-part__card.features-part-card
               .features-part-card__icon
-                img(src='img/icons/features-part-icon-2.svg' alt='icon')
+                img(src='img/icons/features-icon-5.svg' alt='icon')
               .features-part-card__description
                 h3.title.features-part-card__title No Dependencies
                 p.text.features-part-card__text Independent of any third-party libraries or frameworks.
             .features-part__card.features-part-card
               .features-part-card__icon
-                img(src='img/icons/features-part-icon-3.svg' alt='icon')
+                img(src='img/icons/features-icon-7.svg' alt='icon')
               .features-part-card__description
                 h3.title.features-part-card__title Well Documented
                 p.text.features-part-card__text Each component and module has descriptions and API.
             .features-part__card.features-part-card
               .features-part-card__icon
-                img(src='img/icons/features-part-icon-4.svg' alt='icon')
+                img(src='img/icons/features-icon-1.svg' alt='icon')
               .features-part-card__description
                 h3.title.features-part-card__title Real Life Tested
                 p.text.features-part-card__text
                   | We use it in our work. On this site too for the front and
                   | admin.
-            a.features-part__more(href='#')
+            a.more.features-part__more(href='#')
               | Explore all features
               img(src='img/icons/arrow-right-blue.svg' alt='→')
           // .features-part__body
@@ -124,7 +124,65 @@ body
         // .container
       // .information
 
-  
+      section.features
+        .container
+          .features__body
+            span.subtitle.features__subtitle FEATURES
+            h2.heading.features__heading Explore about our awesome features
+            p.text.features__text 
+              = "An awesome & powefull JavaScript library for building user interfaces. Independent of any third-party libraries or frameworks."
+            .features__grid
+              .features-item.features__item
+                .features-item__img
+                  img(src="img/icons/features-icon-1.svg", alt="icon")
+                h3.title.features-item__title Simple usage
+                p.text.features-item__text.
+                  Our library makes things simple like never before, by preferring code over configuration.
+                a.more.features-item__more(href="#") Learn more
+                  img(src="img/icons/arrow-right-blue.svg", alt="→")
+              .features-item.features__item
+                .features-item__img
+                  img(src="img/icons/features-icon-2.svg", alt="icon")
+                h3.title.features-item__title Efficient builds
+                p.text.features-item__text.
+                  Using the power of node streams, first gives you fast builds that don't write intermediary.
+                a.more.features-item__more(href="#") Learn more
+                  img(src="img/icons/arrow-right-blue.svg", alt="→")
+              .features-item.features__item
+                .features-item__img
+                  img(src="img/icons/features-icon-3.svg", alt="icon")
+                h3.title.features-item__title Flexible library
+                p.text.features-item__text.
+                  Our library is designed to be agnostic about your setup and style of coding. 
+                a.more.features-item__more(href="#") Learn more
+                  img(src="img/icons/arrow-right-blue.svg", alt="→")
+              .features-item.features__item
+                .features-item__img
+                  img(src="img/icons/features-icon-4.svg", alt="icon")
+                h3.title.features-item__title Friendly Syntax
+                p.text.features-item__text.
+                  Our library starts from the same syntax that millions of JavaScript developers know today
+                a.more.features-item__more(href="#") Learn more
+                  img(src="img/icons/arrow-right-blue.svg", alt="→")
+              .features-item.features__item
+                .features-item__img
+                  img(src="img/icons/features-icon-5.svg", alt="icon")
+                h3.title.features-item__title Suit for large apps
+                p.text.features-item__text.
+                    Using the power of node streams, first gives you fast builds that don't write intermediary.
+                a.more.features-item__more(href="#") Learn more
+                  img(src="img/icons/arrow-right-blue.svg", alt="→")
+              .features-item.features__item
+                .features-item__img
+                  img(src="img/icons/features-icon-6.svg", alt="icon")
+                h3.title.features-item__title State of the art JavaScript
+                p.text.features-item__text.
+                  Our library offers support for the latest and evolving JavaScript features.
+                a.more.features-item__more(href="#") Learn more
+                  img(src="img/icons/arrow-right-blue.svg", alt="→")
+            // .features__body
+        // .container
+      // .features
 
     include _footer
   include _js

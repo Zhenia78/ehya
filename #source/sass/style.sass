@@ -11,6 +11,20 @@
   font-style: normal
   font-display: swap
 @font-face
+  font-family: 'HKGrotesk'
+  src: url('../fonts/HKGrotesk-SemiBold.woff')
+  src: local('☺'), url('../fonts/HKGrotesk-SemiBold.woff2') format('woff2')
+  font-weight: 600
+  font-style: normal
+  font-display: swap
+@font-face
+  font-family: 'HKGrotesk'
+  src: url('../fonts/HKGrotesk-Regular.woff')
+  src: local('☺'), url('../fonts/HKGrotesk-Regular.woff2') format('woff2')
+  font-weight: 400
+  font-style: normal
+  font-display: swap
+@font-face
   font-family: 'Open-Sans'
   src: url('../fonts/OpenSans-Bold.woff')
   src: local('☺'), url('../fonts/OpenSans-Bold.woff2') format('woff2')
@@ -116,6 +130,16 @@ body.body-active
   text-transform: uppercase
   color: #36B37E
 
+.more
+  font-family: Open-Sans
+  font-weight: bold
+  font-size: 18px
+  line-height: 25px
+  color: #1565D8
+  &>img
+    margin-left: 15px
+    vertical-align: middle
+
 .button
   display: flex
   align-items: center
@@ -152,6 +176,7 @@ body.body-active
 @import "blocks/_features-part.sass"
 @import "blocks/_quickstart.sass"
 @import "blocks/_information.sass"
+@import "blocks/_features.sass"
 @import "blocks/_footer.sass"
 @import "media.sass"
 //</ПОДКЛЮЧЕНИЯ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЕЛМЕНТОВ>========================================================================

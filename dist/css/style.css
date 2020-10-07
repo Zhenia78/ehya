@@ -10,6 +10,24 @@
 }
 
 @font-face {
+  font-family: 'HKGrotesk';
+  src: url("../fonts/HKGrotesk-SemiBold.woff");
+  src: local("☺"), url("../fonts/HKGrotesk-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HKGrotesk';
+  src: url("../fonts/HKGrotesk-Regular.woff");
+  src: local("☺"), url("../fonts/HKGrotesk-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Open-Sans';
   src: url("../fonts/OpenSans-Bold.woff");
   src: local("☺"), url("../fonts/OpenSans-Bold.woff2") format("woff2");
@@ -184,6 +202,19 @@ body.body-active {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #36B37E;
+}
+
+.more {
+  font-family: Open-Sans;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  color: #1565D8;
+}
+
+.more > img {
+  margin-left: 15px;
+  vertical-align: middle;
 }
 
 .button {
@@ -533,16 +564,6 @@ body.body-active {
 .features-part__more {
   display: block;
   margin: 32px auto 0 auto;
-  font-family: Open-Sans;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 25px;
-  color: #1565D8;
-}
-
-.features-part__more > img {
-  margin-left: 15px;
-  vertical-align: middle;
 }
 
 .features-part-card__icon {
