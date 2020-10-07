@@ -1,0 +1,47 @@
+.features
+  padding: 0 0 111px 0
+  background-color: #F8FBFF
+  &__body
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__subtitle
+    display: inline-block
+    margin: 0 0 16px 0
+  &__heading
+    margin: 0 0 16px 0
+  &__text
+    margin: 0 0 64px 0
+    max-width: 750px
+    text-align: center
+  &__grid
+    display: grid
+    grid-gap: 30px 30px
+    grid-template-rows: repeat(2, minmax(317px, auto))
+    grid-template-columns: repeat(3, fit-content(360px))
+  &__item
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 48px 32px 37px 32px
+    background: #FFFFFF
+    border: 1px solid #E5EAF4
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.02)
+    border-radius: 16px
+
+.features-item
+  &__img
+    width: 40px
+    height: 40px
+    margin: 0 0 25px 0
+    overflow: hidden
+    &>img
+      max-width: 100%
+      width: 100%
+      objec-fit: cover
+
+  &__title
+    margin: 0 0 8px 0
+
+  &__text
+    margin: 0 0 11px 0
