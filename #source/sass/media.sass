@@ -63,6 +63,16 @@
       &__title
         text-align: center
 
+  .sponsors
+    padding: 0
+    &__body
+      flex-direction: column
+    &__text
+      align-items: center
+      margin: 0 0 40px 0
+    &__heading
+      text-align: center
+
 @media (max-width: 767px)
   .header
     &-bottom
@@ -87,6 +97,36 @@
         margin: 0 0 25px 0
       &__item
         margin: 0 10px 10px 0
+
+  .sponsors
+    &__body
+      padding: 0
+
+@media (max-width: 590px)
+  .sponsors
+    &__block
+      flex-direction: column
+      align-items: center
+      padding: 0 70px
+    &__item
+      &:nth-child(1)
+        align-self: flex-start
+        order: 3
+        margin: -10px 0 0 0
+      &:nth-child(2)
+        order: -1
+        margin: 0
+      &:nth-child(3)
+        align-self: flex-end
+        margin: -90px 0 0 0
+      &:nth-child(4)
+        align-self: flex-start
+        order: -1
+        margin: 0
+      &:nth-child(5)
+        align-self: flex-end
+        order: 3
+        margin: -90px 0 0 0
 
 @media (max-width: 520px)
   .header
@@ -139,7 +179,22 @@
     &__item
       padding: 32px 23px
 
+  .sponsors
+    padding: 0 0 64px 0
+    &__block
+      padding: 0 30px
+
 @media (max-width: 400px)
   .features-part
     &__card
       align-items: center
+
+  .sponsors
+    &__block
+      padding: 0
+    &__item
+      &:nth-child(1)
+        margin: -30px 0 0 0
+      &:nth-child(5)
+        align-self: flex-end
+        margin: -60px 0 0 0

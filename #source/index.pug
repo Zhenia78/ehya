@@ -183,6 +183,77 @@ body
             // .features__body
         // .container
       // .features
+      
+      .sponsors
+        .container
+          .sponsors__body
+            .sponsors__text
+              h2.heading.sponsors__heading See all our great sponsors
+              button.button-bordered.sponsors__button Become Sponsor
+            .sponsors__block
+              .sponsors__item
+                img(src="img/icons/airbnb.svg", alt="airbnb")
+              .sponsors__item
+                img(src="img/icons/google.svg", alt="Google")
+              .sponsors__item
+                img(src="img/icons/spotify.svg", alt="Spotify")
+              .sponsors__item
+                img(src="img/icons/fitbit.svg", alt="fitbit")
+              .sponsors__item
+                img(src="img/icons/mapbox.svg", alt="mapbox")
+          // .sponsors__body
+        // .container
+      // .sponsors 
 
+      .questions
+        .container
+          .questions__body
+            div
+              span.subtitle.questions__subtitle HAVE QUESTIONS?
+              h2.heading.questions__heading Relax because we always will be here for you
+              p.text.questions__text.
+                Our library starts from the same syntax that millions of JavaScript developers know today.
+              ul.library-advantages
+                li.library-advantages__item
+                  div.library-advantages__icon
+                    img(src="img/icons/library-advantages-icon.svg", alt="&2611;")
+                  div
+                    h3.library-advantages__title Our library are simple
+                    p.library-advantages__text Our library makes things simple like never before, by preferring code over configuration.
+                li.library-advantages__item
+                  div.library-advantages__icon
+                    img(src="img/icons/library-advantages-icon.svg", alt="&2611;")
+                  div
+                    h3.library-advantages__title Suit for large apps
+                    p.library-advantages__text Using the power of node streams, first gives you fast builds that don't write intermediary.
+            ul.popular-questions
+              li.popular-questions-item.popular-questions__item
+                .popular-questions-item__preview
+                  h3.title.popular-questions-item__title How to get started?
+                  .popular-questions-item__icon
+                .popular-questions-item__text.
+                  An awesome #{&} powefull JavaScript library for building user interfaces. Makes things simple like never before, by preferring code over configuration.
+              li.popular-questions-item.popular-questions__item
+                .popular-questions-item__preview
+                  h3.title.popular-questions-item__title How to composing with components?
+                  .popular-questions-item__icon
+                .popular-questions-item__text.
+                  An awesome #{&} powefull JavaScript library for building user interfaces. Makes things simple like never before, by preferring code over configuration.
+              li.popular-questions-item.popular-questions__item
+                .popular-questions-item__preview
+                  h3.title.popular-questions-item__title How to create your own module?
+                  .popular-questions-item__icon
+                .popular-questions-item__text.
+                  An awesome #{&} powefull JavaScript library for building user interfaces. Makes things simple like never before, by preferring code over configuration.
+              li.popular-questions-item.popular-questions__item
+                .popular-questions-item__preview
+                  h3.title.popular-questions-item__title Migrate from old version
+                  .popular-questions-item__icon
+                .popular-questions-item__text.
+                  An awesome #{&} powefull JavaScript library for building user interfaces. Makes things simple like never before, by preferring code over configuration.
+            // .popular-questions
+          // .questions__body
+        // .container
+      // .questions
     include _footer
   include _js
