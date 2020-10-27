@@ -1075,6 +1075,79 @@ body.body-active {
   color: #5A7184;
 }
 
+.quote {
+  padding: 0 0 160px 0;
+  background-color: #0D2436;
+}
+
+.quote__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quote__icon {
+  width: 40px;
+  height: 46px;
+  margin: 0 0 18px 0;
+}
+
+.quote__icon > img {
+  width: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.quote__text {
+  max-width: 750px;
+  margin: 0 0 47px 0;
+  font-family: HKGrotesk;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #B3BAC5;
+}
+
+.quote__author {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.quote-author__avatar {
+  margin: 0 16px 0 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.quote-author__avatar > img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.quote-author__name {
+  margin: 0 0 4px 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+
+.quote-author__subtitle {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #5A7184;
+}
+
 @media (min-width: 767px) {
   .heading {
     font-size: calc(28px + 8 *(100vw / 1140));
@@ -1138,6 +1211,14 @@ body.body-active {
 
   .popular-questions-item__text {
     line-height: calc(24px + 4 *(100vw / 1140));
+  }
+
+  .quote__text {
+    font-size: calc(28px + 12 *(100vw / 1140));
+  }
+
+  .quote__text {
+    line-height: calc(44px + 16 *(100vw / 1140));
   }
 }
 
@@ -1305,6 +1386,14 @@ body.body-active {
   .popular-questions {
     max-width: 100%;
   }
+
+  .quote {
+    padding: 0 0 96px 0;
+  }
+
+  .quote__text {
+    margin: 0 0 40px 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1374,6 +1463,14 @@ body.body-active {
 
   .popular-questions-item__text {
     line-height: calc(24px + 6.8 *((100vw - 320px) / 1140));
+  }
+
+  .quote__text {
+    font-size: calc(28px + 20.4 *((100vw - 320px) / 1140));
+  }
+
+  .quote__text {
+    line-height: calc(44px + 27.2 *((100vw - 320px) / 1140));
   }
 
   .header-bottom {
@@ -1560,6 +1657,14 @@ body.body-active {
 
   .questions__text-block {
     margin: 0 0 37px 0;
+  }
+
+  .quote {
+    padding: 0 0 69px 0;
+  }
+
+  .quote__text {
+    margin: 0 0 24px 0;
   }
 }
 
