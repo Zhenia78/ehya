@@ -5,6 +5,7 @@ $(document).ready(function () {
   let burger = $(".header__burger");
   let tabsItem = $(".tabs__item");
   let tabsText = $(".tabs__text");
+  let spoiler = $(".spoiler-item__preview");
 
 
   nav_dropdown.click(function () {
@@ -51,6 +52,25 @@ $(document).ready(function () {
     $(this).addClass("tabs__item_active");
     $(target).addClass("tabs__text_active");
   });
+
+  spoiler.click(function () {
+    if ($(this).attr("class") == "spoiler-item__preview popular-questions-item__preview spoiler-item__preview_active") {
+      spoiler.removeClass("spoiler-item__preview_active");
+      $(".spoiler-item__text").slideUp();
+      $(".spoiler-item__icon").removeClass("spoiler-item__icon_active");
+    } else {
+      spoiler.removeClass("spoiler-item__preview_active");
+      $(".spoiler-item__text").slideUp();
+      $(".spoiler-item__icon").removeClass("spoiler-item__icon_active");
+
+      var target1 = $(this).attr("data-target1");
+      var target2 = $(this).attr("data-target2");
+      $(this).addClass("spoiler-item__preview_active");
+      $(target1).slideDown();
+      $(target2).addClass("spoiler-item__icon_active");
+    }
+  });
+
 
 
 });

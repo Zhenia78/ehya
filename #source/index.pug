@@ -184,7 +184,7 @@ body
         // .container
       // .features
       
-      .sponsors
+      section.sponsors
         .container
           .sponsors__body
             .sponsors__text
@@ -205,10 +205,10 @@ body
         // .container
       // .sponsors 
 
-      .questions
+      section.questions
         .container
           .questions__body
-            div
+            div.questions__text-block
               span.subtitle.questions__subtitle HAVE QUESTIONS?
               h2.heading.questions__heading Relax because we always will be here for you
               p.text.questions__text.
@@ -226,31 +226,31 @@ body
                   div
                     h3.library-advantages__title Suit for large apps
                     p.library-advantages__text Using the power of node streams, first gives you fast builds that don't write intermediary.
-            ul.popular-questions
-              li.popular-questions-item.popular-questions__item
-                .popular-questions-item__preview
-                  h3.title.popular-questions-item__title How to get started?
-                  .popular-questions-item__icon
-                .popular-questions-item__text.
-                  An awesome #{&} powefull JavaScript library for building user interfaces. Makes things simple like never before, by preferring code over configuration.
-              li.popular-questions-item.popular-questions__item
-                .popular-questions-item__preview
-                  h3.title.popular-questions-item__title How to composing with components?
-                  .popular-questions-item__icon
-                .popular-questions-item__text.
-                  An awesome #{&} powefull JavaScript library for building user interfaces. Makes things simple like never before, by preferring code over configuration.
-              li.popular-questions-item.popular-questions__item
-                .popular-questions-item__preview
-                  h3.title.popular-questions-item__title How to create your own module?
-                  .popular-questions-item__icon
-                .popular-questions-item__text.
-                  An awesome #{&} powefull JavaScript library for building user interfaces. Makes things simple like never before, by preferring code over configuration.
-              li.popular-questions-item.popular-questions__item
-                .popular-questions-item__preview
-                  h3.title.popular-questions-item__title Migrate from old version
-                  .popular-questions-item__icon
-                .popular-questions-item__text.
-                  An awesome #{&} powefull JavaScript library for building user interfaces. Makes things simple like never before, by preferring code over configuration.
+            ul.spoiler.popular-questions
+              li.spoiler-item.popular-questions-item.popular-questions__item
+                .spoiler-item__preview.popular-questions-item__preview(data-target1="#text-1" data-target2="#icon-1")
+                  h3.title.spoiler-item__title.popular-questions-item__title How to get started?
+                  .spoiler-item__icon.popular-questions-item__icon(id="icon-1")
+                p.spoiler-item__text.popular-questions-item__text(id="text-1").
+                  An awesome & powefull JavaScript library for building user interfaces. Makes things simple like never before, by preferring code over configuration.
+              li.spoiler-item.popular-questions-item.popular-questions__item
+                .spoiler-item__preview.popular-questions-item__preview(data-target1="#text-2" data-target2="#icon-2")
+                  h3.title.spoiler-item__title.popular-questions-item__title How to composing with components?
+                  .spoiler-item__icon.popular-questions-item__icon(id="icon-2")
+                p.spoiler-item__text.popular-questions-item__text(id="text-2").
+                  An awesome & powefull JavaScript library for building user interfaces. Makes things simple like never before, by preferring code over configuration.
+              li.spoiler-item.popular-questions-item.popular-questions__item
+                .spoiler-item__preview.popular-questions-item__preview(data-target1="#text-3" data-target2="#icon-3")
+                  h3.title.spoiler-item__title.popular-questions-item__title How to create your own module?
+                  .spoiler-item__icon.popular-questions-item__icon(id="icon-3")
+                p.spoiler-item__text.popular-questions-item__text(id="text-3").
+                  An awesome & powefull JavaScript library for building user interfaces. Makes things simple like never before, by preferring code over configuration.
+              li.spoiler-item.popular-questions-item.popular-questions__item
+                .spoiler-item__preview.popular-questions-item__preview(data-target1="#text-4" data-target2="#icon-4")
+                  h3.title.spoiler-item__title.popular-questions-item__title Migrate from old version
+                  .spoiler-item__icon.popular-questions-item__icon(id="icon-4")
+                p.spoiler-item__text.popular-questions-item__text(id="text-4").
+                  An awesome & powefull JavaScript library for building user interfaces. Makes things simple like never before, by preferring code over configuration.
             // .popular-questions
           // .questions__body
         // .container

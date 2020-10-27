@@ -100,11 +100,11 @@ body.body-active
 .heading
   font-family: HKGrotesk
   font-weight: bold
-  font-size: 36px
-  line-height: 48px
   text-align: center
   letter-spacing: 0.2px
   color: #183B56
+  @include adaptive-font(36, 28)
+  @include line-h(48, 36)
 
 .title
   font-family: HKGrotesk
@@ -122,6 +122,7 @@ body.body-active
   @include adaptive-font(18, 16)
 
 .subtitle
+  display: inline-block
   font-family: Open-Sans
   font-weight: 600
   font-size: 14px
@@ -169,6 +170,48 @@ body.body-active
 
 .op
   font-family: Open-Sans
+
+.spoiler
+  &-item
+    &__text
+      display: none
+    &__icon
+      position: relative
+      width: 11px
+      height: 11px
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        height: 3px
+        width: 11px
+        background-color: #1565D8
+        border-radius: 1px
+        transition: all 0s ease
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        height: 3px
+        width: 11px
+        background-color: #1565D8
+        border-radius: 2px
+        transform: rotate(90deg)
+      &_active
+        &::before
+          animation: rotate90hidden 0.4s linear 1 normal forwards
+        &::after
+          animation: rotate90 0.4s linear 1 normal forwards
+
+@keyframes rotate90
+  100%
+    transform: rotate(180deg)
+@keyframes rotate90hidden
+  100%
+    transform: rotate(90deg)
+    visibility: hidden
 //</ОСНОВНОЙ БЛОК>=======================================================================================================
 
 //<ПОДКЛЮЧЕНИЯ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЕЛМЕНТОВ>=========================================================================

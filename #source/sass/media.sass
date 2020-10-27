@@ -3,6 +3,13 @@
     &__card
       max-width: 370px
 
+  .questions
+    &__text-block
+      max-width: 400px
+
+  .popular-questions
+    max-width: 480px
+
 @media (max-width: 992px)
   .header
     &__nav
@@ -73,6 +80,26 @@
     &__heading
       text-align: center
 
+  .questions
+    padding: 204px 0 96px 0
+    &__body
+      flex-direction: column
+      align-items: center
+    &__text-block
+      max-width: 100%
+      margin: 0 0 46px 0
+    &__subtitle, &__text, &__heading
+      display: block
+      text-align: center
+
+  .library-advantages
+    display: flex
+    &__item:not(:last-child)
+      margin: 0
+
+  .popular-questions
+    max-width: 100%
+
 @media (max-width: 767px)
   .header
     &-bottom
@@ -101,6 +128,11 @@
   .sponsors
     &__body
       padding: 0
+
+  .library-advantages
+    flex-direction: column
+    &__item:not(:last-child)
+      margin: 0 0 23px 0
 
 @media (max-width: 590px)
   .sponsors
@@ -183,6 +215,12 @@
     padding: 0 0 64px 0
     &__block
       padding: 0 30px
+
+  .questions
+    padding: 48px 0 88px 0
+    background-image: none
+    &__text-block
+      margin: 0 0 37px 0
 
 @media (max-width: 400px)
   .features-part

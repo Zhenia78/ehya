@@ -56,6 +56,19 @@
 
 //</ДЕЛАЕТ АДАПТИВНЫЙ ШРИФТ>=============================================================================================
 
+//<ДЕЛАЕТ АДАПТИВНЫЙ МЕЖДУСТРОЧНЫЙ ИНТЕРВАЛ>=============================================================================
+@mixin line-h($pcSize, $mobSize)
+  $addSize: $pcSize - $mobSize
+  $addMobSize: $addSize + $addSize * 0.7
+
+  @media (max-width: 767px)
+    line-height: calc(#{$mobSize + px} + #{$addMobSize} *((100vw - 320px) / #{$containerWidth}))
+
+  @media (min-width: 767px)
+    line-height: calc(#{$mobSize + px} + #{$addSize} *(100vw / #{$containerWidth}))
+
+//</ДЕЛАЕТ АДАПТИВНЫЙ МЕЖДУСТРОЧНЫЙ ИНТЕРВАЛ>============================================================================
+
 @mixin bg-img($url, $position, $repeat, $size)
   background-image: url($url)
   background-position: #{$position}
